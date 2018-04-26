@@ -20,7 +20,7 @@ public class GuiMain extends Application {
         //sets intial name of scene
         primaryStage.setTitle("Garden_planner");
         //initiates creation of design of Garden Planner and
-        //centres the entre pane
+        //centres the entire pane
         planner.createintialdesign();
         pane centrePane = (pane) root.getcenter();
         primaryStage.show();
