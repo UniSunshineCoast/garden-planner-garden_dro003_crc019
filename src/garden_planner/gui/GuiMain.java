@@ -9,17 +9,28 @@ import javafx.stage.Stage;
 
 public class GuiMain extends Application {
 
+    public GardenPlanner planner = new GardenPlanner();
+
     @Override
     public void start(Stage primaryStage) throws Exception{
-        // Parent root = FXMLLoader.load(getClass().getResource("garden_gui.fxml"));
-        Button root = new Button("TODO: design garden planner GUI");
-        primaryStage.setTitle("Hello World");
-        primaryStage.setScene(new Scene(root, 300, 275));
+        // Sets up the parent root, size and shape of the stage, scene and name
+        // of title.
+        Borderpane root = FXMLLoader.load(getClass().getResource("garden_gui.fxml"));
+        primaryStage.setScene(scene);
+        //sets intial name of scene
+        primaryStage.setTitle("Garden_planner");
+        //initiates creation of design of Garden Planner and
+        //centres the entre pane
+        planner.createintialdesign();
+        pane centrePane = (pane) root.getcenter();
+        primaryStage.show();
+        primaryStage.setScene(scene);
         primaryStage.show();
     }
 
-
-    public static void main(String[] args) {
+    public static void main(String[] args)
+    {
         launch(args);
     }
 }
+//Button root = new Button("TODO: design garden planner GUI");
